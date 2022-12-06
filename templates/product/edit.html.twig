@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Product{% endblock %}
+
+{% block body %}
+<style>
+body {
+background-position: top;
+background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+form{
+text-align: center;}
+input{
+   font: 15px Arial, Helvetica, sans-serif;
+   text-align: center;
+   font-weight: bold;
+   border-radius: 10px;
+   width: 20%;
+   height: 35px
+}
+textarea {
+  width: 20%;
+  height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  //background-color: #f8f8f8;
+  resize: none;
+}
+button {	
+  width: 220px;
+  height: 50px;
+  margin-left: 4px;
+  text-align: center;
+  color: rgb(15, 15, 111);
+  background-color: rgb(241, 146, 178);
+  border-radius: 10px;
+  font-size: 16px;
+padding: 10px;
+}
+</style>
+    <h1 align= 'center'>Edit Product</h1>
+
+<p>    {{ include('product/_form.html.twig', {'button_label': 'Update'}) }}
+
+    {{ include('product/_delete_form.html.twig') }} </p>
+  <div align= 'center'><a href="{{ path('product_index') }}">back to list</a> </div>
+{% endblock %}
